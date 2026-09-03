@@ -1,0 +1,1498 @@
+/* =========================================================
+   SCENES PAGE
+========================================================= */
+
+.scenes-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.scenes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.header-text h1 {
+  margin: 0 0 7px;
+  font-size: 32px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #7b8498;
+}
+
+
+/* =========================================================
+   ADD SCENE BUTTON
+========================================================= */
+
+.add-scene-btn {
+  border: none;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 18px;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #7357ff,
+    #5b43e8
+  );
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(91, 67, 232, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-scene-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(91, 67, 232, 0.35);
+}
+
+.add-scene-btn:active {
+  transform: translateY(0);
+}
+
+.plus-sign {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.scenes-tabs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  width: fit-content;
+
+  margin-bottom: 32px;
+  padding: 5px;
+
+  border-radius: 12px;
+}
+
+.tab-btn {
+  border: none;
+  background: transparent;
+
+  padding: 10px 18px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #778196;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #6048e8;
+}
+
+.tab-btn.active {
+  background: white;
+  color: #5d46e8;
+
+  box-shadow:
+    0 3px 10px rgba(28, 35, 55, 0.08);
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.scenes-section {
+  width: 100%;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  margin: 0;
+
+  font-size: 13px;
+  color: #8a93a6;
+}
+
+/* =========================================================
+   SCENE COUNT
+========================================================= */
+
+.scene-count {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+
+  font-size: 22px;
+  font-weight: 750;
+
+  color: #5f49e8;
+}
+
+.scene-count span {
+  font-size: 12px;
+  font-weight: 550;
+  color: #8992a5;
+}
+
+/* =========================================================
+   SCENE GRID
+========================================================= */
+
+.scenes-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================================================
+   SCENE WRAPPER
+========================================================= */
+
+.scene-wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+/* =========================================================
+   SCENE CARD
+========================================================= */
+
+.scene-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  border-radius: 17px;
+
+  border: 1px solid transparent;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.scene-card:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CARD LEFT
+========================================================= */
+
+.card-left {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 14px;
+}
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.icon-box {
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  font-size: 25px;
+
+  background: linear-gradient(
+    135deg,
+    #f0edff,
+    #e5e0ff
+  );
+}
+
+/* =========================================================
+   CARD DETAILS
+========================================================= */
+
+.card-details {
+  min-width: 0;
+}
+
+.scene-title-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 6px;
+}
+
+.scene-title-line h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-details > p {
+  margin: 0;
+
+  color: #8992a5;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   SCENE TYPE BADGE
+========================================================= */
+
+.scene-type-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #5c46dc;
+  background: #eeeaff;
+
+  white-space: nowrap;
+}
+
+
+.scene-type-badge.system {
+  color: #14795b;
+  background: #e4f8f0;
+}
+
+/* =========================================================
+   CARD RIGHT
+========================================================= */
+
+.card-right {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+/* =========================================================
+   FAVORITE BUTTON
+========================================================= */
+
+.fav-btn {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+  background: transparent;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #9aa2b2;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.fav-btn:hover {
+  background: #f2efff;
+  color: #684ff0;
+  transform: scale(1.05);
+}
+
+
+.fav-btn.is-fav {
+  color: #e34d75;
+}
+
+.fav-btn.is-fav:hover {
+  color: #ef3565;
+}
+
+/* =========================================================
+   ACTIVE PILL
+========================================================= */
+
+.active-pill {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #32c58a;
+
+  box-shadow:
+    0 0 0 4px rgba(50, 197, 138, 0.12);
+}
+
+/* =========================================================
+   MORE OPTIONS
+========================================================= */
+
+.more-options-btn {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+  background: transparent;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8992a5;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.more-options-btn:hover,
+.more-options-btn.menu-open {
+  background: #f0edff;
+  color: #5d46e8;
+}
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.play-btn {
+  width: 39px;
+  height: 39px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeaff;
+  color: #624ae8;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+
+  background: #dfd9ff;
+}
+
+.play-btn.running {
+  background: #dff8ed;
+  color: #149b68;
+}
+
+/* =========================================================
+   THREE DOT MENU
+========================================================= */
+
+.scene-options-menu {
+  position: absolute;
+
+  top: 70px;
+  right: 55px;
+
+  z-index: 20;
+
+  width: 190px;
+
+  padding: 7px;
+
+  border-radius: 12px;
+
+  border: 1px solid transparent;
+
+  box-sizing: border-box;
+
+  animation: menuFade 0.16s ease;
+}
+
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.scene-options-menu button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border: none;
+  background: transparent;
+
+  padding: 10px 11px;
+
+  border-radius: 8px;
+
+  text-align: left;
+
+  color: #4d5669;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.scene-options-menu button:hover {
+  background: #f1efff;
+  color: #6048e7;
+}
+.scene-options-menu button span {
+  width: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   DEVICE PANEL
+========================================================= */
+
+.scene-device-panel {
+  margin-top: 8px;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  border: 1px solid transparent;
+
+  animation: panelOpen 0.2s ease;
+}
+
+@keyframes panelOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   DEVICE PANEL HEADER
+========================================================= */
+
+.device-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+.device-panel-header h4 {
+  margin: 0 0 3px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.device-panel-header span {
+  color: #8992a5;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   SMALL ADD DEVICE BUTTON
+========================================================= */
+
+.add-device-small-btn {
+  border: none;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: #eeeaff;
+  color: #5e48e4;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-device-small-btn:hover {
+  background: #dfd9ff;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   DEVICE LIST
+========================================================= */
+
+.device-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+/* =========================================================
+   DEVICE ITEM
+========================================================= */
+
+.scene-device {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 11px 12px;
+
+  border-radius: 11px;
+
+  border: 1px solid transparent;
+}
+
+/* =========================================================
+   DEVICE INFO
+========================================================= */
+
+.device-info {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 11px;
+}
+
+.device-icon {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f1efff;
+
+  font-size: 17px;
+}
+
+
+
+.device-info strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.device-status {
+  display: inline-block;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #9aa2b2;
+}
+
+.device-status.on {
+  color: #18a875;
+}
+
+
+
+/* =========================================================
+   DEVICE ACTIONS
+========================================================= */
+
+.device-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* =========================================================
+   DEVICE SWITCH
+========================================================= */
+
+.device-switch {
+  position: relative;
+
+  width: 39px;
+  height: 21px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #d8dde7;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease;
+}
+
+
+
+.device-switch span {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.2s ease;
+}
+
+.device-switch.enabled {
+  background: #654de8;
+}
+
+.device-switch.enabled span {
+  transform: translateX(18px);
+}
+
+/* =========================================================
+   REMOVE DEVICE
+========================================================= */
+
+.remove-device-btn {
+  width: 27px;
+  height: 27px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #a0a7b5;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.remove-device-btn:hover {
+  background: #ffe8ed;
+  color: #df4166;
+}
+
+
+/* =========================================================
+   NO DEVICES
+========================================================= */
+
+.no-devices {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px 15px;
+
+  text-align: center;
+}
+
+.no-devices > span {
+  margin-bottom: 8px;
+
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.no-devices p {
+  margin: 0 0 12px;
+
+  color: #8b94a7;
+
+  font-size: 12px;
+}
+
+.no-devices button {
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 8px;
+
+  background: #eeeaff;
+  color: #5d46e8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+
+/* =========================================================
+   HIDE DEVICES
+========================================================= */
+
+.hide-devices-btn {
+  width: 100%;
+
+  margin-top: 13px;
+
+  padding: 9px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #7e8799;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hide-devices-btn:hover {
+  background: #eeeaff;
+  color: #5f49e8;
+}
+
+
+/* =========================================================
+   EMPTY FAVORITES
+========================================================= */
+
+.empty-scenes {
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  border: 1px dashed transparent;
+}
+
+.empty-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 50%;
+
+  background: #f0edff;
+  color: #735be8;
+
+  font-size: 27px;
+}
+
+
+
+.empty-scenes h3 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+}
+
+.empty-scenes p {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: #8a93a6;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.modal-overlay,
+.device-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(7, 12, 24, 0.58);
+
+  backdrop-filter: blur(6px);
+
+  animation: overlayFade 0.2s ease;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   ADD SCENE MODAL
+========================================================= */
+
+.modal-card {
+  width: min(100%, 430px);
+
+  padding: 26px;
+
+  border-radius: 18px;
+
+  box-sizing: border-box;
+
+  animation: modalOpen 0.22s ease;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-card h2 {
+  margin: 0 0 22px;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border-radius: 9px;
+
+  border: 1px solid #dfe3eb;
+
+  outline: none;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #a2a9b7;
+}
+
+.form-group input:focus {
+  border-color: #7058e8;
+
+  box-shadow:
+    0 0 0 3px rgba(112, 88, 232, 0.12);
+}
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  margin-top: 23px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.cancel-btn {
+  background: #edf0f5;
+  color: #606a7c;
+}
+
+.cancel-btn:hover {
+  background: #e2e6ee;
+}
+
+.confirm-btn {
+  background: #654de8;
+  color: white;
+
+  box-shadow:
+    0 6px 16px rgba(101, 77, 232, 0.25);
+}
+
+.confirm-btn:hover {
+  background: #5840d8;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ADD DEVICE MODAL
+========================================================= */
+
+.device-modal-card {
+  width: min(100%, 520px);
+  max-height: 80vh;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 18px;
+
+  animation: modalOpen 0.22s ease;
+}
+
+/* =========================================================
+   DEVICE MODAL HEADER
+========================================================= */
+
+.device-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 23px 24px 18px;
+}
+
+.device-modal-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+}
+
+.device-modal-header p {
+  margin: 0;
+
+  color: #8a93a6;
+
+  font-size: 12px;
+}
+
+.close-modal-btn {
+  width: 33px;
+  height: 33px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #edf0f5;
+
+  color: #667083;
+
+  font-size: 21px;
+
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  background: #e2e6ed;
+}
+
+
+
+/* =========================================================
+   AVAILABLE DEVICES
+========================================================= */
+
+.available-devices {
+  overflow-y: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+
+  padding: 4px 24px 24px;
+}
+
+/* Scrollbar */
+
+.available-devices::-webkit-scrollbar {
+  width: 5px;
+}
+
+.available-devices::-webkit-scrollbar-thumb {
+  background: #cbd0db;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   AVAILABLE DEVICE
+========================================================= */
+
+.available-device {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  position: relative;
+
+  padding: 12px;
+
+  border-radius: 11px;
+
+  border: 1px solid #e3e7ee;
+
+  background: transparent;
+
+  color: #4f596c;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.available-device:hover:not(:disabled) {
+  border-color: #cfc7ff;
+
+  background: #f6f4ff;
+
+  transform: translateY(-1px);
+}
+
+
+.available-device.already-added {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   AVAILABLE DEVICE ICON
+========================================================= */
+
+.available-device-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #f0edff;
+
+  font-size: 17px;
+}
+
+.available-device small {
+  margin-left: auto;
+
+  color: #19a876;
+
+  font-size: 9px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .scenes-page {
+    padding: 24px;
+  }
+
+  .scenes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .scenes-page {
+    padding: 18px;
+  }
+
+  .scenes-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header-text h1 {
+    font-size: 27px;
+  }
+
+  .add-scene-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scenes-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .tab-btn {
+    flex: 1;
+    min-width: 95px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+  }
+
+  .scene-count {
+    font-size: 18px;
+  }
+
+  .scene-card {
+    align-items: flex-start;
+
+    padding: 16px;
+  }
+
+  .card-right {
+    gap: 3px;
+  }
+
+  .fav-btn,
+  .more-options-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .play-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+  .scene-title-line h3 {
+    max-width: 150px;
+  }
+
+  .scene-options-menu {
+    top: 65px;
+    right: 40px;
+  }
+
+  .device-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-device-small-btn {
+    width: 100%;
+  }
+
+  .available-devices {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+  .scene-card {
+    flex-direction: column;
+  }
+
+  .card-left {
+    width: 100%;
+  }
+
+  .card-right {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+
+  .scene-title-line {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .scene-title-line h3 {
+    max-width: 200px;
+  }
+
+  .modal-card {
+    padding: 20px;
+  }
+
+  .device-modal-header {
+    padding: 19px 18px 15px;
+  }
+
+  .available-devices {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

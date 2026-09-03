@@ -1,0 +1,802 @@
+/* ==============================
+   DEVICES PAGE
+============================== */
+
+.devices-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f7f8fc;
+  color: #1f2937;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.devices-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.devices-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+/* SEARCH */
+
+.search-bar {
+  width: 280px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  font-size: 17px;
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-bar input::placeholder {
+  color: #9ca3af;
+}
+
+
+/* ADD BUTTON */
+
+.add-btn {
+  height: 44px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  background: #673de0;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #5731c5;
+  transform: translateY(-1px);
+}
+
+
+/* ==============================
+   TOP TABS
+============================== */
+
+.tab-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-btn {
+  padding: 12px 18px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn:hover {
+  color: #673de0;
+}
+
+.tab-btn.active {
+  color: #673de0;
+  border-bottom: 2px solid #673de0;
+}
+
+.filter-icon-btn {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* ==============================
+   CATEGORY CHIPS
+============================== */
+
+.category-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.chip-btn {
+  padding: 9px 16px;
+  border: 1px solid #e1e3e8;
+  border-radius: 20px;
+  background: white;
+  color: #6b7280;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chip-btn:hover {
+  border-color: #673de0;
+  color: #673de0;
+}
+
+.chip-btn.active {
+  background: #673de0;
+  border-color: #673de0;
+  color: white;
+}
+
+
+/* ==============================
+   DEVICES GRID
+============================== */
+
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+
+/* ==============================
+   DEVICE CARD
+============================== */
+
+.device-card {
+  background: white;
+  border: 1px solid #e7e8ed;
+  border-radius: 14px;
+  padding: 20px;
+  min-height: 150px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: 0.2s;
+}
+
+.device-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* CARD TOP */
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.device-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0ebff;
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.card-info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #202124;
+}
+
+.card-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #8a8f98;
+}
+
+
+/* ==============================
+   TOGGLE SWITCH
+============================== */
+
+.switch {
+  position: relative;
+  width: 46px;
+  height: 25px;
+  display: inline-block;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #d1d5db;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:checked + .slider {
+  background: #673de0;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(21px);
+}
+
+
+/* ==============================
+   BRIGHTNESS
+============================== */
+
+.brightness-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.brightness-control input {
+  flex: 1;
+  accent-color: #673de0;
+  cursor: pointer;
+}
+
+.control-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: #673de0;
+}
+
+
+/* ==============================
+   FAN CONTROLS
+============================== */
+
+.pill-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.pill {
+  padding: 7px 15px;
+  border: 1px solid #e2e3e8;
+  background: white;
+  border-radius: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pill:hover {
+  border-color: #673de0;
+  color: #673de0;
+}
+
+.pill.active {
+  background: #673de0;
+  border-color: #673de0;
+  color: white;
+}
+
+
+/* ==============================
+   AC TEMPERATURE
+============================== */
+
+.temp-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cool-icon {
+  font-size: 22px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.counter button:hover {
+  background: #f0ebff;
+  color: #673de0;
+}
+
+.counter strong {
+  font-size: 16px;
+}
+
+
+/* ==============================
+   STATUS
+============================== */
+
+.status-footer {
+  margin-top: 22px;
+}
+
+.badge-gray {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #f3f4f6;
+  color: #6b7280;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.badge-green {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #e8f8ef;
+  color: #18a957;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1100px) {
+
+  .devices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .devices-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .header-actions {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .devices-page {
+    padding: 20px;
+  }
+
+  .devices-header {
+    flex-direction: column;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .search-bar {
+    flex: 1;
+    width: auto;
+  }
+
+  .devices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-navigation {
+    overflow-x: auto;
+  }
+
+  .category-chips {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .chip-btn {
+    white-space: nowrap;
+  }
+
+}
+/* =========================
+   ADD DEVICE MODAL
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.add-device-modal {
+  width: 450px;
+  max-width: 90%;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-header p {
+  margin-top: 6px;
+  color: #777;
+}
+
+.close-btn {
+  border: none;
+  background: #f1f1f1;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #673de0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background: #eee;
+}
+
+.save-btn {
+  background: #673de0;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #5630c5;
+}
+
+
+/* =========================
+   NO DEVICES
+========================= */
+
+.no-devices {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 15px;
+}
+
+.no-devices h2 {
+  margin-bottom: 8px;
+}
+
+.no-devices p {
+  color: #777;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.device-result {
+  margin: 25px 0 15px;
+}
+
+.device-result h2 {
+  margin: 0;
+}
+
+.device-result span {
+  color: #777;
+  font-size: 14px;
+}
+.devices-page {
+  padding: 32px 40px;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.device-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.device-card h3 {
+  color: var(--text-main);
+}
+
+.device-card p, .device-status {
+  color: var(--text-sub);
+}
+/* Container for the tab buttons */
+.tab-navigation,
+.scenes-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  background: transparent; /* Removes the white outer background box */
+  padding: 0;
+}
+
+/* Individual tab buttons */
+.tab-btn {
+  background-color: var(--bg-card);
+  color: var(--text-sub);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover state */
+.tab-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text-main);
+}
+
+/* Active tab button */
+.tab-btn.active {
+  background-color: var(--accent-purple-light);
+  color: var(--text-purple);
+  border-color: var(--accent-purple);
+  font-weight: 600;
+}
+/* ===================================================
+   ENERGY CONSUMPTION CARD (THEME-AWARE)
+   =================================================== */
+
+.energy-card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Header & Dropdown */
+.energy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.energy-title-group h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main) !important;
+  margin: 0 0 4px 0;
+}
+
+.energy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #10b981; /* Green indicator badge */
+}
+
+/* Select Dropdown */
+.energy-select {
+  background-color: var(--bg-icon) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.energy-select:hover {
+  border-color: var(--border-hover) !important;
+}
+
+/* Main Usage Display */
+.energy-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.stat-main h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-main) !important;
+  margin: 0;
+}
+
+.stat-main .unit {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-sub) !important;
+}
+
+.stat-tooltip {
+  font-size: 12px;
+  background-color: var(--bg-icon) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+.tooltip-date {
+  color: var(--text-sub) !important;
+}
+
+.tooltip-value {
+  color: var(--text-main) !important;
+}
+
+/* SVG Chart Area */
+.energy-chart {
+  width: 100%;
+  height: 110px;
+  margin-top: 4px;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Timeline Axis Labels */
+.energy-timeline {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color) !important;
+  padding-top: 10px;
+}
+
+.timeline-date {
+  font-size: 11px;
+  color: var(--text-sub) !important;
+  font-weight: 500;
+}
+
+.timeline-date.active {
+  color: var(--accent-purple, #6338f6) !important;
+  font-weight: 700;
+}
+
+.devices-header h1{
+  color: var(--text-main);
+}
