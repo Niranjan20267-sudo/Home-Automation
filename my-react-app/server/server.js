@@ -168,9 +168,8 @@ app.post("/api/signup", async (req, res) => {
     // -------------------------------------------------
     // EMAIL VALIDATION
     // -------------------------------------------------
-
     const emailRegex =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(normalizedEmail)) {
       return res.status(400).json({
