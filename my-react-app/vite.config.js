@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
+    base: Process.env.VITE_BASE_PATH || "/Home-Automation"
   ],
 })
