@@ -19,7 +19,10 @@ import "./App.css";
 
 const getSavedUser = () => {
   try {
-    const savedUser = localStorage.getItem("smartHomeUser");
+    const savedUser =
+      localStorage.getItem("user") ||
+      localStorage.getItem("smartHomeUser");
+
     return savedUser ? JSON.parse(savedUser) : null;
   } catch (error) {
     console.error("Unable to load saved user:", error);
@@ -187,23 +190,32 @@ export default function App() {
   ========================================================= */
 
   const handleLoginSuccess = (loginUser) => {
-    const updatedUser = {
-      name: loginUser?.name || "Niranjan",
-      email: loginUser?.email || "niranjan@gmail.com",
-      phone: loginUser?.phone || "",
-      profileImage: null,
-    };
-
-    setUser(updatedUser);
-    setIsLoggedIn(true);
-
-    localStorage.setItem(
-      "smartHomeUser",
-      JSON.stringify(updatedUser)
-    );
-
-    localStorage.setItem("smartHomeLoggedIn", "true");
+  const updatedUser = {
+    ...loginUser,
+    name: loginUser?.name || "Niranjan",
+    email: loginUser?.email || "niranjan@gmail.com",
+    phone: loginUser?.phone || "",
+    profileImage: null,
   };
+
+  setUser(updatedUser);
+  setIsLoggedIn(true);
+
+  localStorage.setItem(
+    "user",
+    JSON.stringify(updatedUser)
+  );
+
+  localStorage.setItem(
+    "smartHomeUser",
+    JSON.stringify(updatedUser)
+  );
+
+  localStorage.setItem(
+    "smartHomeLoggedIn",
+    "true"
+  );
+};
 
   /* =========================================================
      PROFILE UPDATE

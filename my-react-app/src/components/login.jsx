@@ -129,6 +129,10 @@ export default function Login({ onLoginSuccess }) {
         JSON.stringify(data.user)
       );
 
+      localStorage.setItem(
+        "user", 
+        JSON.stringify(data.user)
+      );
 
       // Send user to App.jsx
       if (onLoginSuccess) {

@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS smarthome;
 
-USE smart_home;
+USE smarthome;
 
 -- =========================================
 -- USERS

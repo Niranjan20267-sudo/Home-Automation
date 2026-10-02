@@ -207,16 +207,21 @@ function Profile({ user, onProfileUpdate }) {
     };
 
     try {
-      localStorage.setItem(
-        "profileData",
+        localStorage.setItem(
+              "profileData",
         JSON.stringify(updatedUser)
-      );
+        );
 
-      localStorage.setItem(
-        "smartHomeUser",
+          localStorage.setItem(
+              "smartHomeUser",
         JSON.stringify(updatedUser)
-      );
+        );
 
+          localStorage.setItem(
+                "user",
+        JSON.stringify(updatedUser)
+        );
+        
       if (onProfileUpdate) {
         onProfileUpdate(updatedUser);
       }
